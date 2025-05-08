@@ -10,6 +10,7 @@ import Navbar from "@/components/navbar"
 import { AuroraBackground } from "@/components/ui/aurora-background"
 import Certifications from "@/components/certifications"
 import { ParallaxScroll } from "@/components/ui/parallax-scroll"
+import Services from "@/components/services"
 
 export const metadata: Metadata = {
   title: "Hakeem Ahmed | Digital Marketing & Content Strategy Specialist",
@@ -28,6 +29,7 @@ export default function Home() {
       <Skills />
       <Certifications />
       {/* <Testimonials /> */}
+      <Services/>
       <Contact />
       <Footer />
     </main>
