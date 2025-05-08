@@ -21,8 +21,9 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#experience" },
+    // { name: "Portfolio", href: "#experience" },
     { name: "Skills", href: "#skills" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ]
@@ -35,7 +36,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-emerald-500">
+          <a href="#" className="text-2xl font-bold  dark:text-emerald-500 text-light-primary">
             Hakeem Ahmed
           </a>
 
@@ -45,7 +46,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-slate-700 dark:text-gray-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+                className="text-light-text text-lg  dark:text-gray-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
               >
                 {link.name}
               </a>

@@ -15,7 +15,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-20 bg-slate-800 h-screen">
+    <section id="about" className="py-20 bg-slate-400/60 dark:bg-slate-800 h-screen">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -25,7 +25,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-emerald-400">About Me</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center text-light-primary dark:text-emerald-400">About Me</h2>
 
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="md:w-1/3">
@@ -39,7 +39,7 @@ export default function About() {
 
             <div className="md:w-2/3">
               <motion.p
-                className="text-lg text-gray-300 mb-4 leading-relaxed "
+                className="text-xl  text-light-text dark:text-gray-300 mb-4 leading-relaxed "
                 variants={variants}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
@@ -48,7 +48,7 @@ export default function About() {
               </motion.p>
 
               <motion.p
-                className="text-lg text-gray-300 mb-4 leading-relaxed"
+                className="text-xl  text-light-text dark:text-gray-300 mb-4 leading-relaxed"
                 variants={variants}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
@@ -58,7 +58,7 @@ export default function About() {
               </motion.p>
 
               <motion.p
-                className="text-lg text-gray-300 leading-relaxed"
+                className="text-xl  text-light-text dark:text-gray-300 leading-relaxed"
                 variants={variants}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >

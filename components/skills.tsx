@@ -10,14 +10,16 @@ export default function Skills() {
   })
 
   const skills = [
-    { name: "Digital Strategy", level: 95 },
-    { name: "Content Marketing", level: 90 },
-    { name: "SEO", level: 85 },
-    { name: "Social Media", level: 95 },
-    { name: "Google Ads", level: 90 },
-    { name: "TikTok Marketing", level: 88 },
-    { name: "Team Leadership", level: 85 },
-    { name: "Analytics & Reporting", level: 80 },
+    { name: "Digital Marketing Strategy", level: 95 },
+    { name: "Social Media Campaigns", level: 90 },
+    { name: "AI Content Creation & Management", level: 85 },
+    { name: "AI-Driven Campaigns", level: 95 },
+    { name: "Performance Marketing", level: 90 },
+    { name: "Brand Positioning", level: 88 },
+    { name: "SEO & SEM", level: 85 },
+    { name: "Data Analytics & Reporting", level: 80 },
+    { name: "WhatsApp Bulk Campaigns", level: 90 },
+    { name: "Cross-Border Marketing", level: 95 },
   ]
 
   const containerVariants = {
@@ -44,10 +46,10 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="py-20 bg-slate-800">
+    <section id="skills" className="py-20 bg-slate-400 dark:bg-slate-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-emerald-400">Skills</h2>
-        <p className="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-light-primary dark:text-emerald-400">Skills</h2>
+        <p className="text-lg text-light-text dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
           My expertise spans across various aspects of digital marketing and content strategy, with a focus on
           delivering measurable results.
         </p>
@@ -63,11 +65,11 @@ export default function Skills() {
             <motion.div key={index} variants={itemVariants} className="mb-6">
               <div className="flex justify-between mb-2">
                 <span className="text-white font-medium">{skill.name}</span>
-                <span className="text-emerald-400 font-medium">{skill.level}%</span>
+                <span className="text-light-primary dark:text-emerald-400 font-medium">{skill.level}%</span>
               </div>
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
+              <div className="h-3 bg-light-secondary dark:bg-slate-700 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-emerald-500 rounded-full"
+                  className="h-full bg-light-primary dark:bg-emerald-500 rounded-full"
                   variants={barVariants}
                   custom={skill.level}
                 />

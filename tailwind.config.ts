@@ -22,6 +22,16 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // Light Palette
+        'light-primary': '#007BFF',
+        'light-secondary': '#6C757D',
+        'light-background': '#F8F9FA',
+        'light-text': '#212529',
+        // Dark Palette
+        'dark-primary': '#5BC0DE',
+        'dark-secondary': '#868E96',
+        'dark-background': '#343A40',
+        'dark-text': '#F8F9FA',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

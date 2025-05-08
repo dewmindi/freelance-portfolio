@@ -8,6 +8,8 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import { AuroraBackground } from "@/components/ui/aurora-background"
+import Certifications from "@/components/certifications"
+import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 
 export const metadata: Metadata = {
   title: "Hakeem Ahmed | Digital Marketing & Content Strategy Specialist",
@@ -18,12 +20,14 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen w-full bg-slate-400 text-white">
-      <Navbar/>
+      <Navbar />
       <Hero />
       <About />
-      <Experience />
+      {/* <Experience /> */}
+      <ParallaxScroll images={["/Brands/AjwanGroup.jpg", "/Brands/BaytAlWaldah.jpg", "/Brands/BOOSTEMS.jpg", "/Brands/FORALL.jpg", "/Brands/fryinsystem.png", "/Brands/Gewan Resort.png", "/Brands/Go Crispy.jpg", "/Brands/Mama’s Cuisine.jpg", "/Brands/SmartKitchen.png", "/Brands/SmartKitchen.png", "/Brands/Tbakh Al Waldah.jpg", "/Brands/Zad Al Yemen.jpg"]} />
       <Skills />
-      <Testimonials />
+      <Certifications />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </main>
