@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 
 export const ParallaxScroll = ({
   images,
+  links,
   className,
 }: {
   images: string[];
+  links: string[];
   className?: string;
 }) => {
   const gridRef = useRef<any>(null);
@@ -30,11 +32,12 @@ export const ParallaxScroll = ({
 
   return (
     <div
-      className={cn("h-[40rem] items-start overflow-y-auto w-full dark:bg-slate-900", className)}
+      id="brands"
+      className={cn("h-[50rem] items-start overflow-y-auto w-full bg-slate-400/60 dark:bg-slate-900", className)}
       ref={gridRef}
     >
-        <h2 className="text-3xl md:text-5xl font-bold mt-10  text-center text-light-primary dark:text-emerald-400">Trusted by Brands</h2>
-        <h1 className="sticky text-center mt-7 text-xl  text-light-text dark:text-gray-300">I’ve had the privilege of partnering with a diverse range of businesses, helping them grow their digital presence and achieve impactful results.</h1>
+      <h2 className="text-3xl md:text-5xl font-bold mt-10  text-center text-emerald-500">Trusted by Brands</h2>
+      <h1 className="sticky text-center mt-7 text-xl  text-light-text dark:text-gray-300">I’ve had the privilege of partnering with a diverse range of businesses, helping them grow their digital presence and achieve impactful results.</h1>
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-5xl mx-auto gap-10 py-40 px-10"
         ref={gridRef}
@@ -45,19 +48,23 @@ export const ParallaxScroll = ({
               style={{ y: translateFirst, willChange: "transform", }} // Apply the translateY motion value here
               key={"grid-1" + idx}
             >
-              <img
-                src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
+              <a href={links[idx]} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={el}
+                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                  height="400"
+                  width="400"
+                  alt="thumbnail"
+                />
+              </a>
+
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond, willChange: "transform", }} key={"grid-2" + idx}>
+              <a href={links[idx]} target="_blank" rel="noopener noreferrer">
               <img
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
@@ -65,12 +72,14 @@ export const ParallaxScroll = ({
                 width="400"
                 alt="thumbnail"
               />
+              </a>
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird, willChange: "transform", }} key={"grid-3" + idx}>
+              <a href={links[idx]} target="_blank" rel="noopener noreferrer">
               <img
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
@@ -78,6 +87,7 @@ export const ParallaxScroll = ({
                 width="400"
                 alt="thumbnail"
               />
+              </a>
             </motion.div>
           ))}
         </div>

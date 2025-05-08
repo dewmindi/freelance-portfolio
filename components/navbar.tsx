@@ -21,10 +21,10 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
-    // { name: "Portfolio", href: "#experience" },
+    { name: "Brands", href: "#brands" },
     { name: "Skills", href: "#skills" },
     { name: "Certifications", href: "#certifications" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold  dark:text-emerald-500 text-light-primary">
+          <a href="#" className="text-3xl font-bold text-emerald-500">
             Hakeem Ahmed
           </a>
 

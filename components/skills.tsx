@@ -46,9 +46,9 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="py-20 bg-slate-400 dark:bg-slate-800">
+    <section id="skills" className="py-20 bg-slate-400/70 dark:bg-slate-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-light-primary dark:text-emerald-400">Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-emerald-400">Skills</h2>
         <p className="text-lg text-light-text dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
           My expertise spans across various aspects of digital marketing and content strategy, with a focus on
           delivering measurable results.
@@ -65,11 +65,11 @@ export default function Skills() {
             <motion.div key={index} variants={itemVariants} className="mb-6">
               <div className="flex justify-between mb-2">
                 <span className="text-white font-medium">{skill.name}</span>
-                <span className="text-light-primary dark:text-emerald-400 font-medium">{skill.level}%</span>
+                <span className="dark:text-emerald-400 font-medium">{skill.level}%</span>
               </div>
-              <div className="h-3 bg-light-secondary dark:bg-slate-700 rounded-full overflow-hidden">
+              <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-light-primary dark:bg-emerald-500 rounded-full"
+                  className="h-full bg-emerald-500 rounded-full"
                   variants={barVariants}
                   custom={skill.level}
                 />

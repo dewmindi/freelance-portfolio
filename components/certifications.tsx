@@ -98,7 +98,7 @@ export default function Certifications() {
     }
 
     return (
-        <section id="certifications" className="py-20 bg-gray-50 dark:bg-slate-900">
+        <section id="certifications" className="py-20 bg-slate-400/60 dark:bg-slate-900">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

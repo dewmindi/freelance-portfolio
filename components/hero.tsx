@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-600 dark:text-dark-text leading-tight font-mono">
             Managing Campaigns & Creative That Deliver.
           </h1>
 
@@ -38,11 +38,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-light-secondary dark:text-gray-200 mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-slate-500 dark:text-gray-200 mb-8 leading-relaxed"
           >
-            Hi, I'm Hakeem Ahmed, a Digital Marketing and Content Strategy Specialist. I bring 7+ years of experience in
-            transforming brands online and offline, from impactful Google & TikTok ad campaigns to compelling social
-            media narratives and creative team leadership. I help businesses stand out...
+            Hi, I’m Hakeem Ahmed, a Digital Marketing and Brand Strategy Expert.
+            With over 5+ years of experience, I craft and execute digital marketing strategies that drive growth, enhance brand visibility, and build lasting customer relationships. 
+            From designing impactful campaigns to leading creative teams and developing engaging brand narratives, I help businesses connect, engage, and succeed in today’s competitive digital landscape.
           </motion.p>
 
           <motion.div
@@ -50,12 +50,24 @@ export default function Hero() {
             animate={{ opacity: isLoaded ? 1 : 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <button className="bg-light-primary dark:bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
-              Let's Connect 
-            </button>
-            <button className="bg-light-primary dark:bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 ml-2">
+            {/* <button className=" bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+              Let's Connect
+            </button> */}
+            {/* <button className=" bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 ml-2">
               View My Work
-            </button>
+            </button> */}
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105"
+            >
+              Let's Connect
+            </a>
+            <a
+              href="#certifications"
+              className="inline-flex items-center justify-center px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 ml-4"
+            >
+              View My Work
+            </a>
           </motion.div>
         </motion.div>
       </div>

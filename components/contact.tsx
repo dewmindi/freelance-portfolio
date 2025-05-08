@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Linkedin, Mail, MessageSquare } from "lucide-react"
+import { useForm, SubmitHandler } from "react-hook-form";
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -21,18 +21,34 @@ export default function Contact() {
     message: "",
   })
 
+  type Inputs = {
+    name: string
+    email: string
+    subject: string
+    message: string
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Form submission logic would go here
-    console.log("Form submitted:", formData)
-    alert("Thanks for your message! I'll get back to you soon.")
-    setFormData({ name: "", email: "", message: "" })
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   // Form submission logic would go here
+  //   console.log("Form submitted:", formData)
+  //   alert("Thanks for your message! I'll get back to you soon.")
+  //   setFormData({ name: "", email: "", message: "" })
+  // }
+
+  const {
+    register,
+    handleSubmit,
+  } = useForm<Inputs>()
+  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    window.location.href = `mailto:udewmindi.ud@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    console.log(formData);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -50,7 +66,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-slate-800">
+    <section id="contact" className="py-20 bg-slate-400/60 dark:bg-slate-800">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -66,30 +82,30 @@ export default function Contact() {
             Let's Build Something Great Together.
           </motion.h2>
 
-          <motion.p variants={itemVariants} className="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+          <motion.p variants={itemVariants} className="text-lg text-light-text dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
             Ready to elevate your digital marketing strategy? Let's connect and discuss how I can help your brand stand
             out.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <motion.div variants={itemVariants}>
-              <Card className="bg-slate-900 border-slate-700 h-full">
+              <Card className="bg-slate-400 dark:bg-slate-900  dark:border-slate-700 h-full shadow-2xl">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-semibold mb-6 text-white">Get In Touch</h3>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                         Name
                       </label>
-                      <Input
+                      <Input {...register("name")}
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your name"
                         required
-                        className="bg-slate-800 border-slate-700 text-white"
+                        className="dark:bg-slate-800 dark:border-slate-700 dark:text-white"
                       />
                     </div>
 
@@ -97,7 +113,7 @@ export default function Contact() {
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
                         Email
                       </label>
-                      <Input
+                      <Input {...register("email")}
                         id="email"
                         name="email"
                         type="email"
@@ -105,7 +121,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="Your email"
                         required
-                        className="bg-slate-800 border-slate-700 text-white"
+                        className="dark:bg-slate-800 dark:border-slate-700 dark:text-white"
                       />
                     </div>
 
@@ -113,7 +129,7 @@ export default function Contact() {
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                         Message
                       </label>
-                      <Textarea
+                      <Textarea {...register("message")}
                         id="message"
                         name="message"
                         value={formData.message}
@@ -121,7 +137,7 @@ export default function Contact() {
                         placeholder="How can I help you?"
                         rows={5}
                         required
-                        className="bg-slate-800 border-slate-700 text-white"
+                        className="dark:bg-slate-800 dark:border-slate-700 dark:text-white"
                       />
                     </div>
 
@@ -134,19 +150,23 @@ export default function Contact() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="bg-slate-900 border-slate-700 h-full">
+              <Card className="bg-slate-400 dark:bg-slate-900 dark:border-slate-700 h-full shadow-2xl">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-semibold mb-6 text-white">Connect With Me</h3>
 
                   <div className="space-y-6">
                     <a
-                      href="https://wa.me/?text=Hi%20Hakeem%2C%20I'd%20love%20to%20discuss%20working%20together%20on%20marketing%20%26%20content%20projects."
+                      href="https://wa.me/97459986554?text=Hi%20Hakeem%2C%20I'd%20love%20to%20discuss%20working%20together%20on%20marketing%20%26%20content%20projects."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-300"
                     >
-                      <div className="h-12 w-12 flex items-center justify-center bg-green-600 rounded-full mr-4">
-                        <MessageSquare className="h-6 w-6 text-white" />
+                      <div className="h-12 w-12 flex items-center justify-center bg-white rounded-full mr-4">
+                        {/* <MessageSquare className="h-6 w-6 text-white" /> */}
+                        <img
+                          src="/socialLogos/whatsapp.png"
+                          className="rounded-md h-6 w-6"
+                        />
                       </div>
                       <div>
                         <h4 className="text-white font-medium">WhatsApp</h4>
@@ -155,13 +175,17 @@ export default function Contact() {
                     </a>
 
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/hakeem-ahmed/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-300"
                     >
-                      <div className="h-12 w-12 flex items-center justify-center bg-blue-600 rounded-full mr-4">
-                        <Linkedin className="h-6 w-6 text-white" />
+                      <div className="h-12 w-12 flex items-center justify-center bg-white rounded-full mr-4">
+                        {/* <Linkedin className="h-6 w-6 text-white" /> */}
+                        <img
+                          src="/socialLogos/linkedin.png"
+                          className="rounded-md h-6 w-6"
+                        />
                       </div>
                       <div>
                         <h4 className="text-white font-medium">LinkedIn</h4>
@@ -170,15 +194,34 @@ export default function Contact() {
                     </a>
 
                     <a
-                      href="mailto:hakeem@example.com"
+                      href="mailto:hello@hakeemahmed.com"
                       className="flex items-center p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-300"
                     >
-                      <div className="h-12 w-12 flex items-center justify-center bg-emerald-600 rounded-full mr-4">
-                        <Mail className="h-6 w-6 text-white" />
+                      <div className="h-12 w-12 flex items-center justify-center bg-white rounded-full mr-4">
+                        {/* <Mail className="h-6 w-6 text-white" /> */}
+                        <img
+                          src="/socialLogos/gmail.png"
+                          className="rounded-md h-6 w-6"
+                        />
                       </div>
                       <div>
                         <h4 className="text-white font-medium">Email</h4>
-                        <p className="text-gray-400 text-sm">hakeem@example.com</p>
+                        <p className="text-gray-400 text-sm">hello@hakeemahmed.com</p>
+                      </div>
+                    </a>
+                    <a
+                      href=" https://www.instagram.com/hakim8_/"
+                      className="flex items-center p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-300"
+                    >
+                      <div className="h-12 w-12 flex items-center justify-center bg-white rounded-full mr-4">
+                        <img
+                          src="/socialLogos/insta.png"
+                          className="rounded-md h-6 w-6"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium">Instagram</h4>
+                        <p className="text-gray-400 text-sm">For Collaborations</p>
                       </div>
                     </a>
                   </div>
