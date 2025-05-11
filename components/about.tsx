@@ -64,7 +64,7 @@ export default function About() {
                 className="mb-4"
               />
               <motion.p
-                className="text-xl  text-light-text dark:text-gray-300 mb-4 leading-relaxed tracking-wide animate-scroll"
+                className="text-xl  text-light-text dark:text-gray-300 mb-4 leading-relaxed tracking-wide"
                 variants={variants}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
