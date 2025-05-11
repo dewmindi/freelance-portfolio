@@ -98,14 +98,14 @@ export function ExpandableCardDemo() {
                     </motion.p>
                   </div>
 
-                  <motion.a
+                  {active.ctaLink &&(<motion.a
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-emerald-600 text-white"
                   >
                     {active.ctaText1}
-                  </motion.a>
+                  </motion.a>)}
                 </div>
                 <div className="mb-4 px-4">
                   <h4 className="text-sm font-semibold text-slate-700 dark:text-gray-200 mb-2">
@@ -301,7 +301,7 @@ const cards = [
       "Creative Direction",
     ],
     ctaLink:
-      "https://drive.google.com/file/d/1trcriiC2rqcyeE-vdfxf99-9YCgqx_D5/view?usp=sharing",
+      "",
     content: () => {
       return (
         <p>
@@ -323,7 +323,7 @@ const cards = [
       "User Behavior Analysis",
       "Reporting",
     ],
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "",
     content: () => {
       return (
         <p>

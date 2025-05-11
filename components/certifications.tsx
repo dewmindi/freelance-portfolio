@@ -107,10 +107,12 @@ export default function Certifications() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-600 dark:text-emerald-400">
+                    {/* <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-600 dark:text-emerald-400"> */}
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-emerald-600 dark:text-emerald-400">
                         Professional Certifications
                     </h2>
-                    <p className="text-lg text-slate-700 dark:text-gray-300 max-w-2xl mx-auto">
+                    {/* <p className="text-lg text-slate-700 dark:text-gray-300 max-w-2xl mx-auto"> */}
+                                        <p className="text-lg text-slate-700 dark:text-gray-300 max-w-2xl mx-auto">
                         I continuously invest in expanding my knowledge and staying current with industry standards through
                         professional certifications and training.
                     </p>
@@ -125,100 +127,6 @@ export default function Certifications() {
                 >
                     {certifications.map((cert) => (
                         <motion.div key={cert.id} variants={itemVariants}>
-                            {/* <Card
-                                className={`overflow-hidden transition-all duration-500 ${expandedId === cert.id
-                                    ? "bg-white dark:bg-slate-800 shadow-lg transform scale-[1.02]"
-                                    : "bg-gray-50 dark:bg-slate-800 hover:shadow-md"
-                                    }`}
-                                onClick={() => handleCardClick(cert.id)}
-                            >
-                                <div className="relative overflow-hidden cursor-pointer">
-                                    <div className="h-48 overflow-hidden">
-                                        <motion.img
-                                            src={cert.image}
-                                            alt={cert.name}
-                                            className="w-full h-full object-cover"
-                                            whileHover={{ scale: 1.05 }}
-                                            transition={{ duration: 0.3 }}
-                                        />
-                                    </div>
-                                    <div className="absolute top-4 right-4">
-                                        <Badge className="bg-emerald-500 hover:bg-emerald-600">{cert.issuer}</Badge>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center pt-6">
-                                    <motion.img
-                                        src={cert.image}
-                                        alt={cert.name}
-                                        className="w-24 h-24 object-cover rounded-full shadow-md border border-gray-300 dark:border-slate-700"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.3 }}
-                                    />
-                                </div>
-
-
-                                <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">{cert.name}</h3>
-
-                                    <div className="flex items-center text-sm text-slate-500 dark:text-gray-400 mb-4">
-                                        {cert.date !== "No IssueDate" && <Calendar className="h-4 w-4 mr-1" />}
-                                        <span>
-                                            {cert.date !== "No IssueDate" && `• Issued: ${cert.date}`} {cert.expiry !== "No Expiration" && `• Expires: ${cert.expiry}`}
-                                        </span>
-                                    </div>
-
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{
-                                            height: expandedId === cert.id ? "auto" : 0,
-                                            opacity: expandedId === cert.id ? 1 : 0,
-                                        }}
-                                        transition={{ duration: 0.3 }}
-                                        className="overflow-hidden"
-                                    >
-                                        <p className="text-slate-600 dark:text-gray-300 mb-4">{cert.description}</p>
-
-                                        <div className="mb-4">
-                                            <h4 className="text-sm font-semibold text-slate-700 dark:text-gray-200 mb-2">Skills</h4>
-                                            <div className="flex flex-wrap gap-2">
-                                                {cert.skills.map((skill, index) => (
-                                                    <Badge key={index} variant="outline" className="bg-gray-100 dark:bg-slate-700">
-                                                        {skill}
-                                                    </Badge>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        <a
-                                            href={cert.credentialUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center text-emerald-500 hover:text-emerald-600 text-sm font-medium"
-                                            onClick={(e) => e.stopPropagation()}
-                                        >
-                                            <span>View Credential</span>
-                                            <ExternalLink className="ml-1 h-3 w-3" />
-                                        </a>
-                                    </motion.div>
-                                    {expandedId !== cert.id && cert.credentialUrl !== "nocred" && (
-                                        <div className="flex justify-center mt-2">
-                                            <motion.div
-                                                initial={{ y: 0 }}
-                                                animate={{ y: [0, 5, 0] }}
-                                                transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-                                                className="text-emerald-500 text-sm"
-                                            >
-                                                Click to view details
-                                            </motion.div>
-                                        </div>
-                                    )}
-
-
-                                    <div className="absolute bottom-3 right-3">
-                                        <Award className="h-6 w-6 text-emerald-500/30" />
-                                    </div>
-                                </CardContent>
-                            </Card> */}
                         </motion.div>
                     ))}
                 </motion.div>
