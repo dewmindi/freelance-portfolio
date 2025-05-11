@@ -40,9 +40,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-slate-500 dark:text-gray-200 mb-8 leading-relaxed"
           >
-            Hi, I’m Hakeem Ahmed, a Digital Marketing and Brand Strategy Expert.
+            Hi, I'm Hakeem Ahmed, a Digital Marketing and Brand Strategy Expert.
             With over 5+ years of experience, I craft and execute digital marketing strategies that drive growth, enhance brand visibility, and build lasting customer relationships. 
-            From designing impactful campaigns to leading creative teams and developing engaging brand narratives, I help businesses connect, engage, and succeed in today’s competitive digital landscape.
+            From designing impactful campaigns to leading creative teams and developing engaging brand narratives, I help businesses connect, engage, and succeed in today's competitive digital landscape.
           </motion.p>
 
           <motion.div

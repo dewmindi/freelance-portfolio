@@ -33,14 +33,6 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   // Form submission logic would go here
-  //   console.log("Form submitted:", formData)
-  //   alert("Thanks for your message! I'll get back to you soon.")
-  //   setFormData({ name: "", email: "", message: "" })
-  // }
-
   const {
     register,
     handleSubmit,
@@ -66,7 +58,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-slate-400/60 dark:bg-slate-800">
+    <section id="contact" className="py-20 bg-slate-400/60 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -77,7 +69,7 @@ export default function Contact() {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-4 text-center text-emerald-400"
+            className="text-3xl md:text-4xl font-bold mb-4 text-center text-emerald-600"
           >
             Let's Build Something Great Together.
           </motion.h2>

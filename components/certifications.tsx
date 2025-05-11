@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Award, ExternalLink } from "lucide-react"
+import { ExpandableCardDemo } from "./ExpandableCardDemo"
 
 export default function Certifications() {
     const [ref, inView] = useInView({
@@ -114,7 +115,7 @@ export default function Certifications() {
                         professional certifications and training.
                     </p>
                 </motion.div>
-
+                <ExpandableCardDemo/>
                 <motion.div
                     ref={ref}
                     variants={containerVariants}
@@ -124,7 +125,7 @@ export default function Certifications() {
                 >
                     {certifications.map((cert) => (
                         <motion.div key={cert.id} variants={itemVariants}>
-                            <Card
+                            {/* <Card
                                 className={`overflow-hidden transition-all duration-500 ${expandedId === cert.id
                                     ? "bg-white dark:bg-slate-800 shadow-lg transform scale-[1.02]"
                                     : "bg-gray-50 dark:bg-slate-800 hover:shadow-md"
@@ -145,6 +146,16 @@ export default function Certifications() {
                                         <Badge className="bg-emerald-500 hover:bg-emerald-600">{cert.issuer}</Badge>
                                     </div>
                                 </div>
+                                <div className="flex justify-center pt-6">
+                                    <motion.img
+                                        src={cert.image}
+                                        alt={cert.name}
+                                        className="w-24 h-24 object-cover rounded-full shadow-md border border-gray-300 dark:border-slate-700"
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.3 }}
+                                    />
+                                </div>
+
 
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">{cert.name}</h3>
@@ -189,19 +200,6 @@ export default function Certifications() {
                                             <ExternalLink className="ml-1 h-3 w-3" />
                                         </a>
                                     </motion.div>
-
-                                    {/* {expandedId !== cert.id && (
-                    <div className="flex justify-center mt-2">
-                      <motion.div
-                        initial={{ y: 0 }}
-                        animate={{ y: [0, 5, 0] }}
-                        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-                        className="text-emerald-500 text-sm"
-                      >
-                        Click to view details
-                      </motion.div>
-                    </div>
-                  )} */}
                                     {expandedId !== cert.id && cert.credentialUrl !== "nocred" && (
                                         <div className="flex justify-center mt-2">
                                             <motion.div
@@ -220,7 +218,7 @@ export default function Certifications() {
                                         <Award className="h-6 w-6 text-emerald-500/30" />
                                     </div>
                                 </CardContent>
-                            </Card>
+                            </Card> */}
                         </motion.div>
                     ))}
                 </motion.div>

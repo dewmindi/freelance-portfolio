@@ -24,11 +24,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      {/* <body>{children}</body> */}
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <AuroraBackground>
+                    <AuroraBackground>
           {children}
           </AuroraBackground>
         </ThemeProvider>
@@ -36,3 +35,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+

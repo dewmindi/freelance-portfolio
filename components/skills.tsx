@@ -48,7 +48,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-slate-400/70 dark:bg-slate-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-emerald-400">Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-emerald-600">Skills</h2>
         <p className="text-lg text-light-text dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
           My expertise spans across various aspects of digital marketing and content strategy, with a focus on
           delivering measurable results.
