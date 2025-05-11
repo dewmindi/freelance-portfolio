@@ -199,13 +199,13 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="relative w-[300px] max-w-full shrink-0 rounded-xl border border-zinc-200 bg-white p-2 dark:border-zinc-700 dark:bg-zinc-900"
+            className="relative w-[200px] max-w-full shrink-0 rounded-xl border border-zinc-200 bg-white p-2 dark:border-zinc-700 dark:bg-zinc-900"
           >
             <a href={item.link || "#"} target="_blank" rel="noopener noreferrer">
               <img
                 src={item.image}
                 alt={item.alt || "Scrolling image"}
-                className="w-full h-auto object-cover rounded-lg hover:opacity-90 transition-opacity"
+                className="w-full h-auto object-contain rounded-lg hover:opacity-90 transition-opacity"
               />
             </a>
             {item.caption && (
