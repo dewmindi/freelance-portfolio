@@ -56,7 +56,8 @@ export default function Hero() {
             {/* <button className=" bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 ml-2">
               View My Work
             </button> */}
-            <a
+                <div className="flex justify-center gap-2">
+                              <a
               href="#contact"
               className="inline-flex items-center justify-center px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105"
             >
@@ -64,10 +65,11 @@ export default function Hero() {
             </a>
             <a
               href="#certifications"
-              className="inline-flex items-center justify-center px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 ml-4"
+              className="inline-flex items-center justify-center px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105"
             >
               View My Work
             </a>
+                </div>
           </motion.div>
         </motion.div>
       </div>

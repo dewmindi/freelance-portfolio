@@ -162,13 +162,13 @@ export function ExpandableCardDemo() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left  text-xs tracking-tight md:text-sm"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-600 dark:text-neutral-400  md:text-left text-xs tracking-tight"
                 >
                   {card.description}
                 </motion.p>
@@ -176,7 +176,7 @@ export function ExpandableCardDemo() {
             </div>
             <motion.button
               layoutId={`button-${card.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-emerald-600 hover:text-white  text-light-text dark:text-dark-text mt-4 md:mt-0"
+              className="-ml-14 md:-ml-0 px-4 py-2 text-sm rounded-full font-bold bg-emerald-600 hover:text-white  text-light-text dark:text-dark-text mt-4 md:mt-0"
             >
               {card.ctaText}
             </motion.button>
@@ -290,7 +290,7 @@ const cards = [
   },
   {
     description: "TikTok For Business",
-    title: "TikTok Ads Strategy - Practical Expertise",
+    title: "TikTok Ads  - Practical Expertise",
     src: "/tiktok.jpg?height=400&width=600",
     ctaText: "View Details",
     ctaText1: "View Credintials",
@@ -313,7 +313,7 @@ const cards = [
   },
   {
     description: "Meta",
-    title: "Meta Ads Strategy - Practical Expertise",
+    title: "Meta Ads  - Practical Expertise",
     src: "/meta1.png?height=400&width=600",
     ctaText: "View Details",
     ctaText1: "View Credintials",
