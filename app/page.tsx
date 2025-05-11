@@ -40,7 +40,7 @@ export default function Home() {
             link: "https://boostgym.qa/",
           },
           {
-            image: "/ Brands/cannelle.jpg",
+            image: "/Brands/cannelle.jpg",
             caption: "",
             link: "https://www.cannelleshop.com/",
           },
