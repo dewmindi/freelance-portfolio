@@ -41,7 +41,7 @@ export default function About() {
               </div> */}
               <div className="relative w-64 h-64 rounded-full overflow-hidden">
                 <Image
-                  src="/hakeem-ahmed.png"
+                  src="/ahmed-image.png"
                   alt="Hakeem Ahmed"
                   fill
                   className="object-cover"
