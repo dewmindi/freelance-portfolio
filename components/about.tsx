@@ -3,6 +3,8 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { TypewriterEffect } from "./ui/typewriter-effect";
+import Image from "next/image";
+
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -28,13 +30,22 @@ export default function About() {
         >
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="md:w-1/3  -ml-12">
-              <div className="relative w-64 h-64  rounded-full overflow-hidden ">
+              {/* <div className="relative w-64 h-64  rounded-full overflow-hidden ">
                 <div
                   className="w-full h-full bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('/hakeem-image.jpg?height=400&width=400')",
+                      "url('/hakeem-ahmed.png')",
                   }}
+                />
+              </div> */}
+              <div className="relative w-64 h-64 rounded-full overflow-hidden">
+                <Image
+                  src="/hakeem-ahmed.png"
+                  alt="Hakeem Ahmed"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </div>
             </div>

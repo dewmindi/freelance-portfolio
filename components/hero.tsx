@@ -30,8 +30,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-600 dark:text-dark-text leading-tight font-mono">
-            Managing Campaigns & Creative That Deliver.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-600 dark:text-dark-text leading-tight font-mono">
+            Helping Brands Grow Through Creative & Data-Driven Campaigns
           </h1>
 
           <motion.p

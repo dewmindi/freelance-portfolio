@@ -5,9 +5,7 @@ import Skills from "@/components/skills"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
-import { AuroraBackground } from "@/components/ui/aurora-background"
 import Certifications from "@/components/certifications"
-import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 import Services from "@/components/services"
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
 
@@ -27,71 +25,69 @@ export default function Home() {
       <InfiniteMovingCards
         items={[
           {
-            image: "/Brands/AjwanGroup.jpg",
+            image: "/Brands/ajwan-group.jpg",
             caption: "",
             link: "https://www.ajwan.group/en",
           },
           {
-            image: "/Brands/BaytAlWaldah.jpg",
+            image: "/Brands/bayt-al-waldah.jpg",
             caption: "",
             link: "https://www.baytalwaldah.com/",
           },
           {
-            image: "/Brands/BOOSTEMS.jpg",
+            image: "/Brands/boostems.jpg",
             caption: "",
             link: "https://boostgym.qa/",
           },
           {
-            image: "Brands/Cannelle.jpg",
+            image: "Brands/cannelle.jpg",
             caption: "",
             link: "https://www.cannelleshop.com/",
           },
           {
-            image: "/Brands/FORALL.jpg",
+            image: "/Brands/forall.jpg",
             caption: "",
             link: "https://forall.qa/",
           },
           {
-            image:  "/Brands/fryinsystem.png",
+            image:  "/Brands/fryin-system.png",
             caption: "",
             link: "https://fryingsystem.com/",
           },
           {
-            image: "/Brands/Gewan Resort.png",
+            image: "/Brands/gewan-resort.png",
             caption: "",
             link: "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fgewanresort%2F&is_from_rle",
           },
           {
-            image: "/Brands/Go Crispy.jpg",
+            image: "/Brands/go-crispy.jpg",
             caption: "",
             link: "https://www.gocrispy.com/",
           },
           {
-            image: "/Brands/Mama’s Cuisine.jpg",
+            image: "/Brands/mamas-cuisine.jpg",
             caption: "",
             link: "https://www.mamas-cuisine.com/",
           },
                     {
-            image: "/Brands/SmartKitchen.png",
+            image: "/Brands/smart-kitchen.png",
             caption: "",
             link: "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsmart_kitchen.qa%2F&is_from_rle",
           },
           {
-            image: "/Brands/Tbakh Al Waldah.jpg",
+            image: "/Brands/tbakh-al-waldah.jpg",
             caption: "",
             link: "https://www.tbakhalwaldah.com/",
           },
                     {
-            image:"/Brands/Zad Al Yemen.jpg",
+            image:"/Brands/zad-al-yemen.jpg",
             caption: "",
             link: "https://www.instagram.com/zad.alyemenq/",
           },
         ]}
       />
-      {/* <Experience /> */}
       <Skills />
       <Certifications />
-      {/* <Testimonials /> */}
       <Services />
       <Contact />
       <Footer />
