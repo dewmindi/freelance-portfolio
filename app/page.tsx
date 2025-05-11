@@ -10,10 +10,11 @@ import Services from "@/components/services"
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
 
 export const metadata: Metadata = {
-  title: "Hakeem Ahmed | Digital Marketing & Content Strategy Specialist",
+  title:
+    "Hakeem Ahmed | Digital Marketing Expert | Brand Strategist | Growth Consultant",
   description:
-    "Digital Marketing and Content Strategy Specialist with 7+ years of experience in transforming brands online and offline.",
-}
+    "Hi, I'm Hakeem Ahmed — a Digital marketing expert and brand strategist with a passion for helping businesses grow online. I work with startups and enterprises to enhance their online presence, increase traffic, and drive real results. My specialties include content marketing, social media strategy, performance marketing, and data-driven campaigns that deliver impact.",
+};
 
 
 export default function Home() {
