@@ -13,8 +13,8 @@ const inter = Inter({ subsets: ["latin"] })
 // }
 
 export const metadata: Metadata = {
-  title: "Hakeem Ahmed | Digital Marketing & Content Strategy Specialist",
-  description: "Portfolio of Hakeem Ahmed, Digital Marketing and Content Strategy Specialist",
+  title: "Hakeem Ahmed | Digital Marketing Expert | Brand Strategist | Growth Consultant",
+  description: "Hi, I'm Hakeem Ahmed — a Digital marketing expert and brand strategist with a passion for helping businesses grow online. I work with startups and enterprises to enhance their online presence, increase traffic, and drive real results. My specialties include content marketing, social media strategy, performance marketing, and data-driven campaigns that deliver impact.",
 }
 
 
