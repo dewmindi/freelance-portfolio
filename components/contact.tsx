@@ -38,7 +38,7 @@ export default function Contact() {
     handleSubmit,
   } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:udewmindi.ud@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:hello@hakeemahmed.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
     console.log(formData);
   };
 

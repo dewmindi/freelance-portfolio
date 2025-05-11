@@ -29,7 +29,7 @@ export default function About() {
           className="max-w-4xl mx-auto"
         >
           <div className="flex flex-col md:flex-row gap-10 items-center">
-            <div className="md:w-1/3  -ml-12">
+            <div className="md:w-1/3  flex justify-center md:justify-start md:-ml-12">
               {/* <div className="relative w-64 h-64  rounded-full overflow-hidden ">
                 <div
                   className="w-full h-full bg-cover bg-center"
@@ -39,7 +39,7 @@ export default function About() {
                   }}
                 />
               </div> */}
-              <div className="relative w-64 h-64 rounded-full overflow-hidden">
+              <div className="flex justify-center relative w-64 h-64 rounded-full overflow-hidden ">
                 <Image
                   src="/ahmed-image.png"
                   alt="Hakeem Ahmed"

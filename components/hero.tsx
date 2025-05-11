@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { Instagram, InstagramIcon as TiktokIcon, MessageSquare } from "lucide-react"
+import { Instagram, InstagramIcon as TiktokIcon, MessageSquare, Facebook } from "lucide-react"
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -102,15 +102,22 @@ export default function Hero() {
             <TiktokIcon size={36} />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             className="absolute text-purple-400 opacity-70"
             style={{ bottom: "25%", left: "25%" }}
             animate={{ y: [0, 12, 0] }}
             transition={{ repeat: Number.POSITIVE_INFINITY, duration: 4.5, ease: "easeInOut" }}
           >
             <Instagram size={36} />
+          </motion.div> */}
+                        <motion.div
+            className="absolute text-rose-400 opacity-70"
+            style={{ bottom: "25%", left: "25%" }}
+            animate={{ y: [0, 12, 0] }}
+            transition={{ repeat: Number.POSITIVE_INFINITY, duration: 4.5, ease: "easeInOut" }}
+          >
+            <Facebook size={36} />
           </motion.div>
-
           <motion.div
             className="absolute text-blue-400 opacity-70"
             style={{ bottom: "35%", right: "25%" }}
