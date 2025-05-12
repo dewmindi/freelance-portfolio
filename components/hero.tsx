@@ -64,7 +64,7 @@ export default function Hero() {
               Let's Connect
             </a>
             <a
-              href="#certifications"
+              href="#brands"
               className="inline-flex items-center justify-center px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105"
             >
               View My Work
