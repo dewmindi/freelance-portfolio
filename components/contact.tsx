@@ -148,7 +148,7 @@ export default function Contact() {
 
                   <div className="space-y-6">
                     <a
-                      href="https://wa.me/97459986554?text=Hi%20Hakeem%2C%20I'd%20love%20to%20discuss%20working%20together%20on%20marketing%20%26%20content%20projects."
+                      href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-300"
